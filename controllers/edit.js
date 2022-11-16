@@ -8,6 +8,7 @@ module.exports = {
             res.redirect("/");
         });
     },
+
     updateTicket: (req, res) => {
         const id = req.params.id;
         TicketList.findByIdAndUpdate(
