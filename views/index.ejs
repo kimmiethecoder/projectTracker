@@ -46,7 +46,7 @@
                             <h3><%=tickets.subject%></h3>
                             <p><%=tickets.description%></p>
                             <p><span class="glyphicon glyphicon-time"></span><%=tickets.severity%><span class="glyphicon glyphicon-user"></span><%=tickets.assignedTo%></p>
-                            <a href="" class="btn btn-warning">Close</a>
+                            <a href="/edit/<%=tickets._id%>" class="btn btn-warning">Close</a>
                             <a href="/edit/remove/<%=tickets._id%>" class="btn btn-danger">Delete</a>
                         </div>
                     <% }) %>
