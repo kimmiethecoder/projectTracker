@@ -1,4 +1,4 @@
-//This route will handle editing and deleting items, as well as rendering the edit page itself
+//This route handles editing/deleting items, renders edit page
 
 const express = require('express')
 const router = express.Router()
