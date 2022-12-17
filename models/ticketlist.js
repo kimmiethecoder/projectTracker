@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const ticketListSchema = new mongoose.Schema({
-subject: {
+title: {
     type: String,
     required: true
 },

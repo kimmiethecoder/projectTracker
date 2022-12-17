@@ -4,7 +4,7 @@ module.exports = {
     getIndex : async (req, res) => {
         try {
             const tickets = await
-            TicketList.find()
+            TicketList.find().sort({ severity: "asc" }).lean();
             res.render("index.ejs", { ticketList: tickets });
         } catch (err) {
             if (err) return res.status(500).send(err);
@@ -12,7 +12,7 @@ module.exports = {
     },
     getProfile: async (req, res) => {
         try {
-          const tickets = await TicketList.find().sort({ date: "asc" }).lean();
+          const tickets = await TicketList.find().sort({ date: "asc" }).lean(); //desc=highest number (or most recent date) first
           res.render("profile.ejs", { ticketList: tickets, user: req.user });
         } catch (err) {
           console.log(err);
@@ -21,7 +21,7 @@ module.exports = {
     createTicket: async (req, res) => {
         const newTicket = new TicketList(
             {
-                subject: req.body.subject,
+                title: req.body.title,
                 description: req.body.description,
                 severity: req.body.severity,
                 assignedTo: req.body.assignedTo,
