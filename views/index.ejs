@@ -55,7 +55,7 @@
                             <p><span class="glyphicon glyphicon-user"></span><%=tickets.assignedTo%></p>
                             <p><span class="glyphicon glyphicon-time"></span><%=tickets.severity%></p>
                             <a href="/edit/<%=tickets._id%>" class="btn btn-warning">Close</a>
-                            <a href="/edit/remove/<%=tickets._id%>" class="btn btn-danger">Delete</a>
+                            <a href="/edit/remove/<%=tickets._id%>" class="btn btn-danger" "action.php" onclick="return confirm('Are you sure you want to Delete?')">Delete</a>
                         </div>
                     <% }) %>
                 </div>
