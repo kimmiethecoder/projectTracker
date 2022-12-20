@@ -4,7 +4,7 @@
 
 ## Description
 
-app for tracking project tasks. all fields except project manager are locked upon posting. projects sort by severity (critical to low).
+app for tracking project tasks. all fields except project manager are locked upon posting. projects sort by severity (critical to low), then by date (chronologically).
 user will log in, add their username to project tasks (which will then lock that field), can close post-completion (toggle open/close functionality). 
 only admin user can edit locked fields and delete/reassign tasks.
 

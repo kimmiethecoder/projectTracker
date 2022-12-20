@@ -4,7 +4,7 @@ module.exports = {
     getIndex : async (req, res) => {
         try {
             const tickets = await
-            TicketList.find().sort({ severity: "asc" }).lean();
+            TicketList.find().sort({ severity: "asc", date: "asc" }).lean();
             res.render("index.ejs", { ticketList: tickets });
         } catch (err) {
             if (err) return res.status(500).send(err);
